@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "app.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx tsc",
+    "dev": "node --watch -r ts-node/register app.ts",
+    "start": "node /dist/app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +17,18 @@
     "url": "https://github.com/jhonsfranky17/ecommerce-server/issues"
   },
   "homepage": "https://github.com/jhonsfranky17/ecommerce-server#readme",
-  "description": ""
+  "description": "",
+  "devDependencies": {
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.3.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "mysql2": "^3.14.3",
+    "sequelize": "^6.37.7"
+  }
 }
